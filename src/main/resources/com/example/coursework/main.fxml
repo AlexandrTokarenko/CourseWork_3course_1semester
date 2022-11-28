@@ -4,17 +4,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="634.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework.controllers.MainWindowController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework.controllers.MainController">
    <center>
-      <Pane prefHeight="532.0" prefWidth="754.0" focusTraversable="true" BorderPane.alignment="CENTER">
-
-<!--         <Text fx:id="textMatrix" layoutX="14.0" layoutY="27.0" wrappingWidth="730.0000152587891" />-->
-         <Label fx:id="textMatrix" layoutY="68.0" prefHeight="552.0" prefWidth="876.0" />
-         <Button layoutX="14.0" layoutY="14.0"  mnemonicParsing="false" onAction="#clickBack" prefHeight="34.0" prefWidth="71.0" text="Назад">
-            <font>
-               <Font size="15.0" />
-            </font>
-         </Button>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #85ffd4;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="233.0" layoutY="262.0" mnemonicParsing="false" onAction="#next" prefHeight="45.0" prefWidth="134.0" text="Розпочати">
+               <font>
+                  <Font size="19.0" />
+               </font></Button>
+            <Label fx:id="label" layoutX="156.0" layoutY="47.0" text="Розробка ГВС" textFill="#2600ff">
+               <font>
+                  <Font name="Monospaced Regular" size="40.0" />
+               </font>
+            </Label>
+         </children>
       </Pane>
    </center>
 </BorderPane>

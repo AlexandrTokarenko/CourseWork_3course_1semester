@@ -11,7 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class MenuController {
+public class Main1Controller {
     @FXML private TextField fieldLamb;
     @FXML private Label exception;
     @FXML private TextField fieldTcp;
@@ -26,7 +26,7 @@ public class MenuController {
         return fps;
     }
 
-    public void calculate(ActionEvent actionEvent) {
+    public void calculate() {
 
         double lamb = 0;
         double tcp = 0;
@@ -44,7 +44,7 @@ public class MenuController {
             k = Integer.parseInt(fieldK.getText());
 
         } catch (NumberFormatException e) {
-            exception.setText("Дані введено не вірно");
+            exception.setText("Дані введено некоректно");
             exception.setMaxWidth(Double.MAX_VALUE);
             exception.setAlignment(Pos.CENTER);
         }
@@ -55,16 +55,12 @@ public class MenuController {
             fps = fps1;
             Stage primaryStage = (Stage) fieldTcp.getScene().getWindow();
             try{
-//                MainWindowController mainWindowController = new MainWindowController(f)
-//                mainWindowController.setFPS(fps);
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/coursework/main.fxml"));
-                Parent root = (Parent)loader.load();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/coursework/main2.fxml"));
+                Parent root = loader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));
-                stage.setTitle("ГВС");
-//                MainWindowController mainWindowController = loader.getController();
-//                mainWindowController.setFPS(fps);
-//                loader.setController(mainWindowController);
+                stage.setResizable(false);
+                stage.setTitle("Гнучка виробнича система");
                 stage.show();
                 primaryStage.hide();
             }

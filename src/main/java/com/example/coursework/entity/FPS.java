@@ -46,6 +46,9 @@ public class FPS {
             }
         }
 
+        System.out.println("matrix[][] = new matrix[" + matrix.length + "][" + matrix[0].length + "]");
+
+
         this.maxProfit = max;
         this.numberOfDrives = n;
         this.numberOfMachines = v;
